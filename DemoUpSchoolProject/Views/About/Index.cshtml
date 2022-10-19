@@ -1,0 +1,43 @@
+﻿@using DemoUpSchoolProject.Models.Entities;
+@model List<TblAbout>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+    int sayac= 0;
+}
+
+<h2>Hakkımda Sayfası</h2>
+<table class="table table-responsive">
+
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        sayac+= 1;
+    <tr>
+        <td>@sayac</td>
+        <td>@item.NameSurname</td>
+        <td>@item.Title</td>
+        <td>@item.Description</td>
+        <td><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-danger">Sil</a></td>
+        <td><a href="/About/UpdateAbout/@item.AboutId" class=" btn btn-success">Güncelle</a></td>
+
+
+    </tr>
+
+    }
+
+
+
+</table>
+
+<a href="/About/AddAbout/" class="btn btn-primary">Yeni Hakkımda Ekle</a>

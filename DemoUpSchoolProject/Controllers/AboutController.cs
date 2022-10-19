@@ -8,68 +8,59 @@ using DemoUpSchoolProject.Models.Entities;
 
 namespace DemoUpSchoolProject.Controllers
 {
-    public class ServicesController : Controller
+    public class AboutController : Controller
     {
-        // GET: Services
-        /*
-        ToList
-        Add
-        Remove
-        Where     
-         */
+
         UpSchoolDbPortfolioEntities db = new UpSchoolDbPortfolioEntities();
+
         public ActionResult Index()
         {
-         var values= db.TblServices.ToList();
-
-
+            var values = db.TblAbout.ToList();
             return View(values);
         }
         [HttpGet]
-        public ActionResult AddServices()
+        public ActionResult AddAbout()
         {
-
             return View();
 
+
         }
         [HttpPost]
-            public ActionResult AddServices(TblServices p)
+        public ActionResult AddAbout(TblAbout p)
         {
-            db.TblServices.Add(p);
+            db.TblAbout.Add(p);
             db.SaveChanges();
-
             return RedirectToAction("Index");
 
 
         }
-
-
-        public ActionResult DeleteService(int id)
+      
+        public ActionResult DeleteAbout(int id)
         {
-            var values = db.TblServices.Find(id);
-            db.TblServices.Remove(values);
+           var values= db.TblAbout.Find(id);
+            db.TblAbout.Remove(values);
             db.SaveChanges();
-
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult UpdateService(int id)
+        public ActionResult UpdateAbout(int id)
         {
-            var values = db.TblServices.Find(id);
 
+            var values = db.TblAbout.Find(id);
             return View(values);
-
 
         }
         [HttpPost]
-         public ActionResult UpdateService(TblServices p)
+        public ActionResult UpdateAbout(TblAbout p)
         {
-            var values = db.TblServices.Find(p.ServiceID);
+           var values= db.TblAbout.Find(p.AboutId);
+            values.NameSurname = p.NameSurname;
+            values.Description = p.Description;
             values.Title = p.Title;
             db.SaveChanges();
-
+          
+           
             return RedirectToAction("Index");
-
 
         }
 

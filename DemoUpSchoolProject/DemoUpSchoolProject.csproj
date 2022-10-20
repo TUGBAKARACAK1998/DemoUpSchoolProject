@@ -131,7 +131,9 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -160,6 +162,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entities\TblServicesFeature.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entities\TblTestimonial.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -203,6 +208,45 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Template\iportfolio-starter\assets\css\style-starter.css" />
+    <Content Include="Template\iportfolio-starter\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template\iportfolio-starter\assets\images\about1.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\award.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\award1.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\award2.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\awards.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\banner.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\client1.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\client2.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\client3.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\client4.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\client5.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\client6.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\clients.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\file.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\file1.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\file2.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\skills.png" />
+    <Content Include="Template\iportfolio-starter\assets\images\team1.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\team2.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\team3.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\team4.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\template1.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\template2.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\template3.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\template4.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\template5.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\template6.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\template7.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\images\template8.jpg" />
+    <Content Include="Template\iportfolio-starter\assets\js\bootstrap.min.js" />
+    <Content Include="Template\iportfolio-starter\assets\js\jquery-3.3.1.min.js" />
+    <Content Include="Template\iportfolio-starter\assets\js\owl.carousel.js" />
+    <Content Include="Template\iportfolio-starter\assets\js\theme-change.js" />
+    <Content Include="Template\iportfolio-starter\contact.html" />
+    <Content Include="Template\iportfolio-starter\index.html" />
+    <Content Include="Template\iportfolio-starter\portfolio.html" />
+    <Content Include="Template\iportfolio-starter\starter-license-W3Layouts.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -229,9 +273,34 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\About\AddAbout.cshtml" />
     <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\Statistic\Index.cshtml" />
+    <Content Include="Template\iportfolio-starter\.vs\iportfolio-starter\config\applicationhost.config" />
+    <Content Include="Template\iportfolio-starter\.vs\iportfolio-starter\FileContentIndex\2375e6f5-31c5-48c7-ad17-db8b8c5497d0.vsidx" />
+    <Content Include="Template\iportfolio-starter\.vs\iportfolio-starter\FileContentIndex\read.lock" />
+    <Content Include="Template\iportfolio-starter\.vs\iportfolio-starter\v17\.suo" />
+    <Content Include="Template\iportfolio-starter\.vs\slnx.sqlite" />
+    <Content Include="Template\iportfolio-starter\.vs\VSWorkspaceState.json" />
+    <Content Include="Template\iportfolio-starter\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Template\iportfolio-starter\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Template\iportfolio-starter\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Template\iportfolio-starter\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Template\iportfolio-starter\assets\fonts\FontAwesome.otf" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Head.cshtml" />
+    <Content Include="Views\User\Header.cshtml" />
+    <Content Include="Views\User\DomainModal.cshtml" />
+    <Content Include="Views\User\SocialMedia.cshtml" />
+    <Content Include="Views\User\Skills.cshtml" />
+    <Content Include="Views\User\FeaturedSkills.cshtml" />
+    <Content Include="Views\User\Awards.cshtml" />
+    <Content Include="Views\User\Testimonial.cshtml" />
+    <Content Include="Views\User\Clients.cshtml" />
+    <Content Include="Views\User\Contact.cshtml" />
+    <Content Include="Views\User\Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Template\iportfolio-starter\.vs\iportfolio-starter\FileContentIndex\merges\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
